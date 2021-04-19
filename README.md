@@ -7,20 +7,20 @@ This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) fo
 
 This one works with [Heroku stack](https://devcenter.heroku.com/articles/stack) `heroku-18` and will always give you the latest 6.x version.
 
-### Differences from Original
+<!-- ### Differences from Original
 
 - fixed a typo
 - changed policy parameters
   - `disk` to 10GB
   - `memory` to 6GB
   - `map` to 4GB
-- prepend app-specific policy folder (`/app/.magick`) to `MAGICK_CONFIGURE_PATH`
+- prepend app-specific policy folder (`/app/.magick`) to `MAGICK_CONFIGURE_PATH` -->
 
 ### Install
 
 In your project root:
 
-`heroku buildpacks:add https://github.com/q-m/heroku-buildpack-imagemagick  --index 1 --app HEROKU_APP_NAME`
+`heroku buildpacks:add https://github.com/isagoe/heroku-buildpack-imagemagick  --index 1 --app HEROKU_APP_NAME`
 
 "index 1" means that imagemagick will be installed first.
 
