@@ -90,6 +90,8 @@ cat $CONFIG_DIR/policy.xml |
   sed 's/policy domain="resource" name="memory" value="[^"]*"/policy domain="resource" name="memory" value="6GiB"/' \
   > $INSTALL_DIR$CONFIG_DIR/policy.xml
 
+sed -i '/<\/policymap>/i\  <policy domain="coder" rights="read|write" pattern="PDF" />' $INSTALL_DIR$CONFIG_DIR/policy.xml ; 
+
 echo "-----> Writing config file"
 cat > $INSTALL_DIR$CONFIG_DIR/magic.xml <<EOF
 <magicmap>
